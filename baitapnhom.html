@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Cat {
+        name;
+        health;
+
+        constructor(a, b) {
+            this.name = a
+            this.health = b
+        }
+
+        tricked() {
+            this.health = this.health - 2
+        }
+
+        result() {
+            return ' mau cua ' + this.name + ' la ' + this.health
+        }
+    }
+
+    let cat1 = new Cat('Tom', 100)
+    let cat2 = new Cat("Oogy", 100)
+    cat1.tricked()
+    alert(cat1.result())
+
+    cat2.tricked()
+    alert(cat2.result())
+
+    class Mouse {
+        name;
+        health;
+
+        constructor(a, b) {
+            this.name = a
+            this.health = b
+        }
+
+        scratched() {
+            this.health--
+        }
+
+        result() {
+            return ' mau cua ' + this.name + ' la ' + this.health
+        }
+    }let mouse = new Mouse('jerry', 100)
+    mouse.scratched()
+    alert(mouse.result())
+
+
+</script>
+
+</body>
+</html>
