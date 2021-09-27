@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368" height="768" style="border:1px solid black;"></canvas>
+<SCRIPT>
+    class Circle {
+        x;
+        y;
+        radius;
+
+        constructor(x, y, radius) {
+            this.x = x
+            this.y = y
+            this.radius = radius
+        }
+
+        setRadius(radius) {
+            this.radius = radius
+        }
+
+        setRandomHex() {
+            return Math.floor(Math.random() * 225)
+        }
+
+        setRandomColor() {
+            let red = this.setRandomHex()
+            let green = this.setRandomHex()
+            let blue = this.setRandomHex()
+            return "rgb(" + red + "," + blue + "," + green + ")"
+        }
+
+        area() {
+            return this.radius * this.radius * Math.PI
+        }
+
+        perimeter() {
+            return this.radius * 2 * Math.PI
+        }
+
+        draw(ctx) {
+            let color = this.setRandomColor()
+            ctx.beginPath()
+            ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI)
+            ctx.fillStyle = color
+            ctx.fill()
+            ctx.closePath()
+        }
+    }
+    let x = Math.floor(Math.random()*window.innerHeight)
+    let y = Math.floor(Math.random()*window.innerWidth)
+    let circle = new Circle(x,y,50)
+    let ctx = document.getElementById('myCanvas').getContext('2d')
+    circle.draw(ctx)
+
+
+    // class Square {
+    //     side;
+    //
+    //     constructor(side) {
+    //         this.side = side
+    //     }
+    //
+    //     setSide(side) {
+    //         this.side = side
+    //     }
+    //
+    //     getPerimeter() {
+    //         return this.side * 4
+    //     }
+    //
+    //     getArea() {
+    //         return this.side ** 2
+    //     }
+    //
+    //     draw(ctx) {
+    //         ctx.rect(0, 0, this.side, this.side)
+    //         ctx.fill()
+    //     }
+    //     setColor(){
+    //
+    //     }
+    // }
+    // let sq1 = new Square(100)
+    // let ctx = document.getElementById('myCanvas').getContext('2d')
+    // sq1.draw(ctx)
+
+
+</SCRIPT>
+</body>
+</html>
