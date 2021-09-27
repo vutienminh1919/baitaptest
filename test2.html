@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // class Soldier {
+    //     name;
+    //     health;
+    //
+    //     constructor(name) {
+    //         this.name = name
+    //         this.health = 100
+    //     }
+    //
+    //     hit(sol) {
+    //         if (sol.name == 'huong') {
+    //             sol.health = sol.health - 10;
+    //         } else sol.health = sol.health - 1
+    //     }
+    //
+    //     getInfo() {
+    //         return this.name + ' con ' + this.health + ' mau '
+    //     }
+    //     buff(sol,health){
+    //
+    //     }
+    // }
+    //
+    // let s1 = new Soldier('huong')
+    // let s2 = new Soldier('khanh')
+    // s1.hit(s2);
+    // alert(s2.getInfo())
+    // s2.hit(s1)
+    // alert(s1.getInfo())
+
+    class Student {
+        name;
+        score;
+
+        constructor(name, score) {
+            this.name = name
+            this.score = score
+
+        }
+
+        lambai() {
+            this.score = this.score + 2
+        }
+
+        note() {
+            this.score = this.score + 1
+        }
+
+        chodiem(name2, Xscore) {
+            this.score = this.score - Xscore
+            name2.score += Xscore
+
+
+        }
+
+        resultOutput() {
+            return this.name + 'co ' + this.score
+        }
+
+    }
+
+    let student1 = new Student('Minh', 100)
+    let student2 = new Student('Minh2', 50)
+
+    student1.lambai()
+    student1.note()
+    alert()
+    student1.chodiem(student2, 10)
+    alert(student2.score)
+
+
+</script>
+</body>
+</html>

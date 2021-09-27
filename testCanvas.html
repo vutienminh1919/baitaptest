@@ -1,10 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
+
 <body>
-$END$
+
+<canvas id="myCanvas" width="300" height="500" style="border:1px solid black;"></canvas>
+<script>
+let ctx = document.getElementById('myCanvas').getContext('2d');
+ctx.beginPath()
+ctx.rect(100,100,30,10);
+// ctx.fill()// to mau
+ctx.stroke()   // to den
+ctx.closePath()
+
+ctx.beginPath()
+ctx.arc(50,50,50,0,2*Math.PI)
+ctx.fill()
+ctx.closePath()
+
+
+
+
+
+
+</script>
 </body>
 </html>

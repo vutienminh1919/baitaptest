@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<Script>
+    // lớp là tập hợp các đối tượng có các thuộc tính và hành vi chung
+    //đối tượng là 1 cụ thể của 1 lớp
+    //     class Cat{
+    //         name;
+    //         color;
+    //         gender;
+    //         constructor(a,b,c) {
+    //             this.name = a
+    //             this.color = b
+    //             this.gender = c
+    //         }
+    //         sounding(){
+    //             alert('meo meo')
+    //         }
+    //         eating(){
+    //             alert('Dog')
+    //         }
+    //     }
+    //
+    //
+    // let cat1 = new Cat('xa','white','cai')
+    // let cat2 = new Cat('TB','black','male')
+    //     console.log(cat1)
+    //     console.log(cat2)
+    //     cat1.sounding()
+
+    class Human {
+        name;
+        height;
+        weight;
+
+        constructor(a, b, c) {
+            this.name = a
+            this.height = b
+            this.weight = c
+        }
+
+        greeting(x) {
+            alert(x + this.name)
+        }
+
+        learn(y) {
+            alert(y)
+        }
+    }
+
+    let human1 = new Human('Bình', '1m78', '75kg')
+    let human2 = new Human('Nhu Anh', '1m50', '50kg')
+    document.write(human1.name+' '+ human1.height+' '+ human1.weight)
+
+
+</Script>
+
+</body>
+</html>
